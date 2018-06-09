@@ -1,5 +1,6 @@
 package rodoviariapoa.testcases;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.After;
@@ -13,7 +14,7 @@ import rodoviariapoa.ressources.DriverSetup;
 import rodoviariapoa.tasks.RegistrationTask;
 import rodoviariapoa.verificationpoints.ResgistrationVerificationPoint;
 
-public class RegistrationWithFirefoxSuccessTestCase {
+public class RegistrationWithFirefoxFailTestCase {
 
 	private WebDriver driver;
 	private RegistrationTask cadastroTask;
@@ -27,16 +28,17 @@ public class RegistrationWithFirefoxSuccessTestCase {
 		this.cadastroVerificationPoint = new ResgistrationVerificationPoint(driver);		
 	}
 
+	
 	@Test
 	public void testMain() throws InterruptedException {
 		this.cadastroTask.abrirFormularioDeCadastro();
-		this.cadastroTask.preencherFormularioDeCadastro("teste@gmail.com", "teste@gmail.com", "Fulano da Silva", "1234567a", "1234567a");
+		this.cadastroTask.preencherFormularioDeCadastro("teste@gmail.com", "", "Fulano da Silva", "1234567a", "1234567a");
 		this.cadastroTask.enviarCadastro();
 		
 		Thread.sleep(2000);
 		
-		boolean condition = this.cadastroVerificationPoint.resultVerification();	
-		assertTrue(condition);		
+		boolean condition = this.cadastroVerificationPoint.resultVerification();			
+		assertFalse(condition);		
 	}
 
 	@After
