@@ -6,17 +6,17 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
-import rodoviariapoa.testcases.BuscaTestCase;
-import rodoviariapoa.testcases.CadastroTestCase;
-import rodoviariapoa.testcases.LoginTestCase;
+import rodoviariapoa.testcases.SearchForPassageWhitFirefoxSuccessTestCase;
+import rodoviariapoa.testcases.RegistrationWithFirefoxSuccessTestCase;
+import rodoviariapoa.testcases.LoginWithFirefoxSuccessTestCase;
 
 
 
 @RunWith(Suite.class)
 @SuiteClasses({
-	CadastroTestCase.class,
-	LoginTestCase.class,
-	BuscaTestCase.class
+	RegistrationWithFirefoxSuccessTestCase.class,
+	LoginWithFirefoxSuccessTestCase.class,
+	SearchForPassageWhitFirefoxSuccessTestCase.class
 })
 
 public class RegressionTestSuite {

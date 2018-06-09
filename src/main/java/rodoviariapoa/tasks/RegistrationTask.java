@@ -2,14 +2,14 @@ package rodoviariapoa.tasks;
 
 import org.openqa.selenium.WebDriver;
 
-import rodoviariapoa.appobjects.CadastroAppObject;
+import rodoviariapoa.appobjects.RegistrationAppObject;
 
-public class CadastroTask {
+public class RegistrationTask {
 
-	private CadastroAppObject cadastroAppObject;
+	private RegistrationAppObject cadastroAppObject;
 	
-	public CadastroTask(WebDriver driver) {
-		this.cadastroAppObject = new CadastroAppObject(driver);
+	public RegistrationTask(WebDriver driver) {
+		this.cadastroAppObject = new RegistrationAppObject(driver);
 	}
 	
 	public void abrirFormularioDeCadastro() {

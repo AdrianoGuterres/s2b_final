@@ -3,13 +3,13 @@ package rodoviariapoa.tasks;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
-import rodoviariapoa.appobjects.BuscaAppObject;
+import rodoviariapoa.appobjects.SearchAppObject;
 
-public class BuscaTask {
-	private BuscaAppObject buscaAppObject;
+public class SearchTask {
+	private SearchAppObject buscaAppObject;
 	
-	public BuscaTask(WebDriver driver) {
-		this.buscaAppObject = new BuscaAppObject(driver);
+	public SearchTask(WebDriver driver) {
+		this.buscaAppObject = new SearchAppObject(driver);
 	}
 	
 	public void preencharFormularioDeBusca(String origem, String destino, String ida, String volta) throws InterruptedException {

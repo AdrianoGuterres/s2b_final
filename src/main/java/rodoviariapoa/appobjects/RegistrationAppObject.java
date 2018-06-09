@@ -4,10 +4,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class CadastroAppObject {
+public class RegistrationAppObject {
 	private WebDriver driver;
 	
-	public CadastroAppObject (WebDriver driver) {
+	public RegistrationAppObject (WebDriver driver) {
 		this.driver = driver;
 	}
 	
