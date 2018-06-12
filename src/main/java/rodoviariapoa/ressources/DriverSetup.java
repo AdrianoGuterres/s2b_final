@@ -6,6 +6,8 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
+import com.aventstack.extentreports.Status;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DriverSetup {
@@ -15,7 +17,9 @@ public class DriverSetup {
 		WebDriver driver;
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
+		driver.manage().window().maximize();		
 		driver.get(url);
+		Report.log(Status.INFO, "A pagina foi carregada.", ScreenShot.capture(driver));
 		return driver;				
 	}
 		
@@ -24,7 +28,9 @@ public class DriverSetup {
 		WebDriver driver;
 		WebDriverManager.firefoxdriver().setup();
 		driver = new FirefoxDriver();
+		driver.manage().window().maximize();				
 		driver.get(url);
+		Report.log(Status.INFO, "A pagina foi carregada.", ScreenShot.capture(driver));
 		return driver;	
 	}		
 }

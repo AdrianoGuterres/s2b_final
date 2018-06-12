@@ -22,8 +22,7 @@ public class RegistrationWithFirefoxFailTestCase {
 
 	@Before
 	public void setUp() { 
-		this.driver = DriverSetup.getDriverConfigFirefox("https://www.rodoviariaportoalegre.com.br");
-		this.driver.manage().window().maximize();
+		this.driver =  DriverSetup.getDriverConfigFirefox("https://www.rodoviariaportoalegre.com.br");
 		this.cadastroTask = new RegistrationTask(driver);
 		this.cadastroVerificationPoint = new ResgistrationVerificationPoint(driver);		
 	}

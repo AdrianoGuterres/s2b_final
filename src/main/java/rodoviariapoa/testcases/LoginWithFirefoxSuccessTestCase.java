@@ -9,7 +9,12 @@ import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import com.aventstack.extentreports.Status;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
+import rodoviariapoa.ressources.DriverSetup;
+import rodoviariapoa.ressources.Report;
+import rodoviariapoa.ressources.ScreenShot;
 import rodoviariapoa.tasks.LoginTask;
 import rodoviariapoa.verificationpoints.LoginVerificationPoint;
 
@@ -20,10 +25,9 @@ public class LoginWithFirefoxSuccessTestCase {
 
 	@Before
 	public void setUp() { 
-		WebDriverManager.chromedriver().setup();
-		this.driver = new ChromeDriver();
-		this.driver.get("https://www.rodoviariaportoalegre.com.br");
-		this.driver.manage().window().maximize();
+		Report.startTest("Login with Firefox");
+		
+		this.driver =  DriverSetup.getDriverConfigFirefox("https://www.rodoviariaportoalegre.com.br");
 		this.loginTask = new LoginTask(driver);
 		this.loginVerificationPoint = new LoginVerificationPoint(driver);		
 	}
@@ -32,6 +36,7 @@ public class LoginWithFirefoxSuccessTestCase {
 	public void testMain() throws InterruptedException {
 		this.loginTask.abrirFormularioDeLogin();
 		this.loginTask.preencherFormularioDeLogin("j332357@nwytg.com", "1234567a");
+		Report.log(Status.INFO, "Campos preenchidos no formulario.", ScreenShot.capture(driver));
 		this.loginTask.enviarLogin();
 		Thread.sleep(3000);
 		

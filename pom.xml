@@ -14,22 +14,50 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
-  <dependencies>
+   <dependencies>  
     <dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.12</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.seleniumhq.selenium</groupId>
-			<artifactId>selenium-java</artifactId>
-			<version>3.12.0</version>
-		</dependency>
-		<dependency>
-			<groupId>io.github.bonigarcia</groupId>
-			<artifactId>webdrivermanager</artifactId>
-			<version>2.2.1</version>
-		</dependency>
+      <groupId>io.github.bonigarcia</groupId>
+      <artifactId>webdrivermanager</artifactId>
+      <version>2.2.2</version>
+    </dependency>
+    
+    <!-- https://mvnrepository.com/artifact/junit/junit -->
+	<dependency>
+       <groupId>junit</groupId>
+       <artifactId>junit</artifactId>
+       <version>4.12</version>
+     <scope>test</scope>
+    </dependency>
+    
+    <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+    <dependency>
+       <groupId>org.seleniumhq.selenium</groupId>
+       <artifactId>selenium-java</artifactId>
+      <version>3.12.0</version>
+    </dependency>  
+    
+    <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+	<dependency>
+	    <groupId>org.apache.poi</groupId>
+   	    <artifactId>poi</artifactId>
+  	  <version>3.17</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+	<dependency>
+  	  <groupId>com.aventstack</groupId>
+	    <artifactId>extentreports</artifactId>
+   		<version>3.1.5</version>
+   	 <scope>provided</scope>
+	</dependency>    
+    
+    <!-- https://mvnrepository.com/artifact/pl.pragmatists/JUnitParams -->
+	<dependency>
+   	 <groupId>pl.pragmatists</groupId>
+ 	   <artifactId>JUnitParams</artifactId>
+ 	   <version>1.0.4</version>
+  	  <scope>test</scope>
+	</dependency>    
   </dependencies>
+	
 </project>

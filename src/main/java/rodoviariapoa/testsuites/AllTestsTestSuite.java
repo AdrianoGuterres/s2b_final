@@ -19,7 +19,7 @@ import rodoviariapoa.testcases.LoginWithFirefoxSuccessTestCase;
 	SearchForPassageWhitFirefoxSuccessTestCase.class
 })
 
-public class RegressionTestSuite {
+public class AllTestsTestSuite {
 
 	@BeforeClass
 	public static void init() {

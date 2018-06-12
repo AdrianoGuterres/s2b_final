@@ -21,7 +21,6 @@ public class SearchForPassageWhitFirefoxSuccessTestCase {
 	@Before
 	public void setUp() { 
 	    this.driver = DriverSetup.getDriverConfigFirefox("https://www.rodoviariaportoalegre.com.br");
-		this.driver.manage().window().maximize();
 		this.buscaTask = new SearchTask(driver);
 		this.buscaVerificationPoint = new SearchVerificationPoint(driver);		
 	}
