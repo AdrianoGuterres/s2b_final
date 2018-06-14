@@ -19,15 +19,13 @@ public class ResgistrationVerificationPoint {
 	
 	public boolean resultFailVerification() { 
 		
-		WebElement element = this.driver.findElement(By.xpath("/html/body/header/nav/ul/li[9]/div/div[3]/div[2]/div"));
+		WebElement element = this.driver.findElement(By.xpath("//*[@id=\"CadSucess\"]"));
 		
 		if(element != null){
 			return element.isDisplayed();
 		}else {
 			return false;
-		}
-
-		
+		}		
 						
 	}
 	

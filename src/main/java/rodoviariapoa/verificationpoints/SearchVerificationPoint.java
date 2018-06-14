@@ -16,8 +16,7 @@ public class SearchVerificationPoint {
 		if(element == null) {
 			return false;
 		}else {
-			return element.isDisplayed();
-		}
-		
+			return true; 			
+		}		
 	}
 }

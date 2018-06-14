@@ -1,6 +1,7 @@
 package rodoviariapoa.testcases;
 
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.After;
 import org.junit.Before;
@@ -47,9 +48,9 @@ public class C001EfetuarCadastroFirefoxTestCase {
 		
 		boolean condition = this.cadastroVerificationPoint.resultVerification();	
 		
-		if(condition) {
+		if(condition==false) {
 			Report.log(Status.PASS, "O teste passou.", ScreenShot.capture(driver)); 
-			assertFalse(condition);
+			assertTrue(condition);
 		}else {
 			Report.log(Status.FAIL, "O teste falhou.", ScreenShot.capture(driver)); 
 		}
