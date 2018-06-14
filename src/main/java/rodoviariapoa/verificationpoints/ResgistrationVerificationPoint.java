@@ -15,21 +15,22 @@ public class ResgistrationVerificationPoint {
 	}
 	
 	public boolean resultVerification() {		
-		WebElement element = this.driver.findElement(By.xpath("/html/body/header/nav/ul/li[9]/div/div[6]/label"));
-
-		
-		return element.isDisplayed();
-		
-		
-		
+		WebElement element = this.driver.findElement(By.xpath("/html/body/header/nav/ul/li[9]/div/div[6]/label"));		
+		return element.isDisplayed();		
 	}
 	
-	public boolean resultFailVerification() {
+	public boolean resultFailVerification() { 
 		
 		WebElement element = this.driver.findElement(By.xpath("/html/body/header/nav/ul/li[9]/div/div[3]/div[2]/div"));
+		
+		if(element != null){
+			return element.isDisplayed();
+		}else {
+			return false;
+		}
 
 		
-		return element.isDisplayed();				
+						
 	}
 	
 }

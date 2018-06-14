@@ -1,6 +1,8 @@
 package rodoviariapoa.ressources;
 
 import java.io.IOException;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.time.LocalDateTime;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -10,7 +12,7 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
 public class Report {
-	private static final String DEFAULT_DESCRIPTION = "DBSERVER TEST SUITE";
+	private static final String DEFAULT_DESCRIPTION = "Students to Business TEST SUITE";
 	private static final String DEFAULT_PATH = "./reports/report_%s.html";
 	private static ExtentReports extentReport;
 	private static ExtentTest logger;
@@ -18,8 +20,19 @@ public class Report {
 	public static void create(String title, String description) {
 		ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(String.format(DEFAULT_PATH, LocalDateTime.now().getNano()));
 		
+		htmlReporter.config().setChartVisibilityOnOpen(true);
+		htmlReporter.config().setDocumentTitle("Results Report");
+		htmlReporter.config().setReportName("Automated Test Cycle");
+		
 		extentReport = new ExtentReports();
 		extentReport.attachReporter(htmlReporter);
+		extentReport.setSystemInfo("OS : ",             System.getProperty("os.name"));
+		extentReport.setSystemInfo("OS Version : ",     System.getProperty("os.version"));
+		extentReport.setSystemInfo("OS Architecture :", System.getProperty("os.arch"));
+		extentReport.setSystemInfo("Java Version : ",   System.getProperty("java.version"));
+		try {extentReport.setSystemInfo("IP Address : ",     InetAddress.getLocalHost().getHostAddress());} catch (UnknownHostException e) {}
+		
+		
 	}
 
 	public static void startTest(String testDescription) {

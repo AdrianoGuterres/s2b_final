@@ -11,8 +11,13 @@ public class SearchVerificationPoint {
 		this.driver = driver;
 	}
 	
-	public boolean resultVerification() {		
-		WebElement element = this.driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/h2"));				
-		return element.isDisplayed();
+	public boolean resultVerification() {				
+		WebElement element = this.driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/h1"));	
+		if(element == null) {
+			return false;
+		}else {
+			return element.isDisplayed();
+		}
+		
 	}
 }

@@ -12,24 +12,24 @@ public class SearchAppObject {
 		this.driver = driver;
 	}
 		
-	public WebElement getOrigemComboBox() {
-		return this.driver.findElement(By.id("campo-origem"));
+	public WebElement getOrigemTexfiel() {
+		return this.driver.findElement(By.xpath("//*[@id=\"campo-origem\"]"));
 	}
 	
-	public WebElement getDestinoComboBox() {
-		return this.driver.findElement(By.id("campo-destino"));
+	public WebElement getDestinoTextField() {
+		return this.driver.findElement(By.xpath("//*[@id=\"campo-destino\"]"));
 	}
 	
 	public WebElement getIdaTextField() {
-		return this.driver.findElement(By.id("campo-ida"));
+		return this.driver.findElement(By.xpath("//*[@id=\"campo-ida\"]"));
 	}
 	
 	public WebElement getVoltaTextField() {
-		return this.driver.findElement(By.id("campo-volta"));
+		return this.driver.findElement(By.xpath("//*[@id=\"campo-volta\"]"));
 	}
 	
 	public WebElement getProcurarButton() {
-		return this.driver.findElement(By.id("procurar"));
+		return this.driver.findElement(By.xpath("//*[@id=\"procurar\"]"));
 	}
 	
 }

@@ -4,7 +4,7 @@
 
   <groupId>pucrs.s2b</groupId>
   <artifactId>rodoviariapoa</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.1</version>
   <packaging>jar</packaging>
 
   <name>rodoviariapoa</name>
@@ -58,6 +58,19 @@
  	   <version>1.0.4</version>
   	  <scope>test</scope>
 	</dependency>    
-  </dependencies>
 	
+	
+	<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+<dependency>
+    <groupId>org.testng</groupId>
+    <artifactId>testng</artifactId>
+    <version>6.14.3</version>
+    <scope>test</scope>
+</dependency>
+	
+	
+  
+    
+  </dependencies>
+  	
 </project>

@@ -38,7 +38,7 @@ public class RegistrationAppObject {
 	public WebElement getConfirmarSenhaTextField() {
 		return this.driver.findElement(By.id("senhaLoginConfCad"));
 	}
-	
+	 
 	public WebElement getEnviarButton() {
 		return this.driver.findElement(By.id("BtnCriarConta"));
 	}

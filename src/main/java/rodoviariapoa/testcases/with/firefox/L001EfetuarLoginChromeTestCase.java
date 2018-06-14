@@ -1,4 +1,4 @@
-package rodoviariapoa.testcases;
+package rodoviariapoa.testcases.with.firefox;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
@@ -18,16 +18,15 @@ import rodoviariapoa.ressources.ScreenShot;
 import rodoviariapoa.tasks.LoginTask;
 import rodoviariapoa.verificationpoints.LoginVerificationPoint;
 
-public class LoginWithFirefoxSuccessTestCase {
+public class L001EfetuarLoginChromeTestCase {
 	private WebDriver driver;
 	private LoginTask loginTask;
 	private LoginVerificationPoint loginVerificationPoint;
 
 	@Before
 	public void setUp() { 
-		Report.startTest("Login with Firefox");
-		
-		this.driver =  DriverSetup.getDriverConfigFirefox("https://www.rodoviariaportoalegre.com.br");
+		Report.startTest("Caso de teste C004: Efetuar Cadastro sem confirmação de senha");
+		this.driver = DriverSetup.getDriverConfigForChrome("https://www.rodoviariaportoalegre.com.br");
 		this.loginTask = new LoginTask(driver);
 		this.loginVerificationPoint = new LoginVerificationPoint(driver);		
 	}
@@ -35,13 +34,21 @@ public class LoginWithFirefoxSuccessTestCase {
 	@Test
 	public void testMain() throws InterruptedException {
 		this.loginTask.abrirFormularioDeLogin();
-		this.loginTask.preencherFormularioDeLogin("j332357@nwytg.com", "1234567a");
-		Report.log(Status.INFO, "Campos preenchidos no formulario.", ScreenShot.capture(driver));
-		this.loginTask.enviarLogin();
-		Thread.sleep(3000);
+		Report.log(Status.PASS, "Formulário aberto.", ScreenShot.capture(driver));
 		
-		boolean condition = this.loginVerificationPoint.verificarMensagemDeSucesso();		
-		assertTrue(condition);
+		this.loginTask.preencherFormularioDeLogin("j332357@nwytg.com", "1234567a");
+		
+		Report.log(Status.PASS, "Formulário preenchido.", ScreenShot.capture(driver));
+		
+		this.loginTask.enviarLogin();
+		
+		boolean condition = this.loginVerificationPoint.verificarMensagemDeSucesso();	
+		
+		if(condition) {
+			Report.log(Status.PASS, "O teste passou.", ScreenShot.capture(driver)); 
+		}else {
+			Report.log(Status.FAIL, "O teste falhou.", ScreenShot.capture(driver)); 
+		}				
 	}
 	
 	@After

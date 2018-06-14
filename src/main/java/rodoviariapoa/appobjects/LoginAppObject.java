@@ -13,19 +13,19 @@ public class LoginAppObject {
 	}
 	
 	public WebElement getLoginButton() {
-		return this.driver.findElement(By.id("MenuLogin"));
+		return this.driver.findElement(By.xpath("//*[@id=\"MenuLogin\"]"));
 	}
 	
 	public WebElement getEmailTextField() {
-		return this.driver.findElement(By.id("emailLogin"));
+		return this.driver.findElement(By.xpath("//*[@id=\"emailLogin\"]"));
 	}
 	
 	public WebElement getSenhaTextField() {
-		return this.driver.findElement(By.id("senhaLogin"));
+		return this.driver.findElement(By.xpath("//*[@id=\"senhaLogin\"]"));
 	}
 	
 	public WebElement getEntrarButton() {
-		return this.driver.findElement(By.id("BtnLogar"));
+		return this.driver.findElement(By.xpath("//*[@id=\"BtnLogar\"]"));
 	}
 
 }

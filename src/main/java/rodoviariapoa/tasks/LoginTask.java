@@ -25,8 +25,6 @@ public class LoginTask {
 	public void preencherFormularioDeLogin(String email, String senha) {
 		this.loginAppObject.getEmailTextField().sendKeys(email);
 		this.loginAppObject.getSenhaTextField().sendKeys(senha);
-		
-		
 	}
 	
 	public void enviarLogin() {

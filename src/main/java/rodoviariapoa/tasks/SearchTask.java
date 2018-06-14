@@ -13,14 +13,18 @@ public class SearchTask {
 	}
 	
 	public void preencharFormularioDeBusca(String origem, String destino, String ida, String volta) throws InterruptedException {
-		this.buscaAppObject.getOrigemComboBox().sendKeys(origem);
+		this.buscaAppObject.getOrigemTexfiel().sendKeys(origem);
 		Thread.sleep(1000);
-		this.buscaAppObject.getOrigemComboBox().sendKeys(Keys.ENTER);
-		this.buscaAppObject.getDestinoComboBox().sendKeys(destino);
+		this.buscaAppObject.getOrigemTexfiel().sendKeys(Keys.ENTER);
+		
+		this.buscaAppObject.getDestinoTextField().sendKeys(destino);
 		Thread.sleep(1000);
-		this.buscaAppObject.getDestinoComboBox().sendKeys(Keys.ENTER);
+		this.buscaAppObject.getDestinoTextField().sendKeys(Keys.ENTER);
+		
 		this.buscaAppObject.getIdaTextField().sendKeys(ida);
 		this.buscaAppObject.getVoltaTextField().sendKeys(volta);
+		
+		Thread.sleep(1000);
 	}
 	
 	public void enviarBusca() {
