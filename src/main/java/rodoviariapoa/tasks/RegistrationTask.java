@@ -2,11 +2,7 @@ package rodoviariapoa.tasks;
 
 import org.openqa.selenium.WebDriver;
 
-import com.aventstack.extentreports.Status;
-
 import rodoviariapoa.appobjects.RegistrationAppObject;
-import rodoviariapoa.ressources.Report;
-import rodoviariapoa.ressources.ScreenShot;
 
 public class RegistrationTask {
 

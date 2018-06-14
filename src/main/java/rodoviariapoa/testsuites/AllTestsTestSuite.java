@@ -7,20 +7,20 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 import rodoviariapoa.ressources.Report;
-import rodoviariapoa.testcases.with.firefox.C004EfetuarCadastroFirefoxTestCase;
-import rodoviariapoa.testcases.with.firefox.B001BuscaPassagemChromeTestCase;
-import rodoviariapoa.testcases.with.firefox.B001BuscaPassagemFirefoxTestCase;
-import rodoviariapoa.testcases.with.firefox.B002BuscaPassagemChromeTestCase;
-import rodoviariapoa.testcases.with.firefox.B002BuscaPassagemFirefoxTestCase;
-import rodoviariapoa.testcases.with.firefox.B003BuscaPassagemChromeTestCase;
-import rodoviariapoa.testcases.with.firefox.B003BuscaPassagemFirefoxTestCase;
-import rodoviariapoa.testcases.with.firefox.C001EfetuarCadastroChromeTestCase;
-import rodoviariapoa.testcases.with.firefox.C001EfetuarCadastroFirefoxTestCase;
-import rodoviariapoa.testcases.with.firefox.C002EfetuarCadastroChromeTestCase;
-import rodoviariapoa.testcases.with.firefox.C002EfetuarCadastroFirefoxTestCase;
-import rodoviariapoa.testcases.with.firefox.C003EfetuarCadastroChromeTestCase;
-import rodoviariapoa.testcases.with.firefox.C003EfetuarCadastroFirefoxTestCase;
-import rodoviariapoa.testcases.with.firefox.C004EfetuarCadastroChromeTestCase;
+import rodoviariapoa.testcases.B001BuscaPassagemChromeTestCase;
+import rodoviariapoa.testcases.B001BuscaPassagemFirefoxTestCase;
+import rodoviariapoa.testcases.B002BuscaPassagemChromeTestCase;
+import rodoviariapoa.testcases.B002BuscaPassagemFirefoxTestCase;
+import rodoviariapoa.testcases.B003BuscaPassagemChromeTestCase;
+import rodoviariapoa.testcases.B003BuscaPassagemFirefoxTestCase;
+import rodoviariapoa.testcases.C001EfetuarCadastroChromeTestCase;
+import rodoviariapoa.testcases.C001EfetuarCadastroFirefoxTestCase;
+import rodoviariapoa.testcases.C002EfetuarCadastroChromeTestCase;
+import rodoviariapoa.testcases.C002EfetuarCadastroFirefoxTestCase;
+import rodoviariapoa.testcases.C003EfetuarCadastroChromeTestCase;
+import rodoviariapoa.testcases.C003EfetuarCadastroFirefoxTestCase;
+import rodoviariapoa.testcases.C004EfetuarCadastroChromeTestCase;
+import rodoviariapoa.testcases.C004EfetuarCadastroFirefoxTestCase;
 
 
 

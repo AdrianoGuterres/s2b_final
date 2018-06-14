@@ -1,7 +1,6 @@
-package rodoviariapoa.testcases.with.firefox;
+package rodoviariapoa.testcases;
 
 import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
 
 import org.junit.After;
 import org.junit.Before;
@@ -24,7 +23,7 @@ public class C001EfetuarCadastroChromeTestCase {
 
 	@Before
 	public void setUp() { 
-		Report.startTest("Caso de teste C004: Efetuar Cadastro");
+		Report.startTest("Caso de teste C001: Efetuar cadastro com o Chrome  ");
 		this.driver = DriverSetup.getDriverConfigForChrome("https://www.rodoviariaportoalegre.com.br");
 		this.cadastroTask = new RegistrationTask(driver);
 		this.cadastroVerificationPoint = new ResgistrationVerificationPoint(driver);		

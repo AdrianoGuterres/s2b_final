@@ -1,4 +1,4 @@
-package rodoviariapoa.testcases.with.firefox;
+package rodoviariapoa.testcases;
 
 import static org.junit.Assert.assertTrue;
 
@@ -6,8 +6,6 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.Sleeper;
 
 import com.aventstack.extentreports.Status;
 
@@ -17,15 +15,15 @@ import rodoviariapoa.ressources.ScreenShot;
 import rodoviariapoa.tasks.SearchTask;
 import rodoviariapoa.verificationpoints.SearchVerificationPoint;
 
-public class B002BuscaPassagemChromeTestCase {
+public class B003BuscaPassagemFirefoxTestCase {
 	private WebDriver driver;
 	private SearchTask buscaTask;
 	private SearchVerificationPoint buscaVerificationPoint;
 
 	@Before
 	public void setUp() { 
-		Report.startTest("Teste de busca.");
-		this.driver = DriverSetup.getDriverConfigForChrome("https://www.rodoviariaportoalegre.com.br");
+		Report.startTest("Caso de teste B003: Buscar Passagem com o Firefox");
+	    this.driver = DriverSetup.getDriverConfigFirefox("https://www.rodoviariaportoalegre.com.br");
 		this.buscaTask = new SearchTask(driver);
 		this.buscaVerificationPoint = new SearchVerificationPoint(driver);		
 	}
@@ -33,7 +31,7 @@ public class B002BuscaPassagemChromeTestCase {
 	@Test
 	public void testMain() throws InterruptedException {
 		Report.log(Status.PASS, "A página carregou.", ScreenShot.capture(driver));
-		this.buscaTask.preencharFormularioDeBusca("", "", "", "");
+		this.buscaTask.preencharFormularioDeBusca("Porto Alegre - rs", "Rio de Janeiro - rj", "", "");
 		Report.log(Status.PASS, "Dados inseridos no formulario.", ScreenShot.capture(driver));
 		Thread.sleep(500);		
 		

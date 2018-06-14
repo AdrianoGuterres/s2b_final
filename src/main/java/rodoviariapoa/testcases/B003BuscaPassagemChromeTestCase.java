@@ -1,4 +1,4 @@
-package rodoviariapoa.testcases.with.firefox;
+package rodoviariapoa.testcases;
 
 import static org.junit.Assert.assertTrue;
 
@@ -6,8 +6,6 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.Sleeper;
 
 import com.aventstack.extentreports.Status;
 
@@ -24,7 +22,7 @@ public class B003BuscaPassagemChromeTestCase {
 
 	@Before
 	public void setUp() { 
-		Report.startTest("Teste de busca.");
+		Report.startTest("Caso de teste B003: Buscar Passagem com o Chrome");
 		this.driver = DriverSetup.getDriverConfigForChrome("https://www.rodoviariaportoalegre.com.br");
 		this.buscaTask = new SearchTask(driver);
 		this.buscaVerificationPoint = new SearchVerificationPoint(driver);		

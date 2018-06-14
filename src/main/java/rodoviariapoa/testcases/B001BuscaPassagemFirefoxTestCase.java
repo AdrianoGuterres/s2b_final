@@ -1,4 +1,4 @@
-package rodoviariapoa.testcases.with.firefox;
+package rodoviariapoa.testcases;
 
 import static org.junit.Assert.assertTrue;
 
@@ -6,11 +6,9 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 import com.aventstack.extentreports.Status;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import rodoviariapoa.ressources.DriverSetup;
 import rodoviariapoa.ressources.Report;
 import rodoviariapoa.ressources.ScreenShot;
@@ -25,7 +23,7 @@ public class B001BuscaPassagemFirefoxTestCase {
 
 	@Before
 	public void setUp() { 
-		Report.startTest("Teste de registro ");
+		Report.startTest("Caso de teste B004: Buscar Passagem com o Firefox");
 		this.driver = DriverSetup.getDriverConfigFirefox("https://www.rodoviariaportoalegre.com.br");
 		this.cadastroTask = new RegistrationTask(driver);
 		this.cadastroVerificationPoint = new ResgistrationVerificationPoint(driver);		

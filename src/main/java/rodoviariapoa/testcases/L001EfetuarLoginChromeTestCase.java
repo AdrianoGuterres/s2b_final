@@ -1,17 +1,12 @@
-package rodoviariapoa.testcases.with.firefox;
-
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+package rodoviariapoa.testcases;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 import com.aventstack.extentreports.Status;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import rodoviariapoa.ressources.DriverSetup;
 import rodoviariapoa.ressources.Report;
 import rodoviariapoa.ressources.ScreenShot;
@@ -25,7 +20,7 @@ public class L001EfetuarLoginChromeTestCase {
 
 	@Before
 	public void setUp() { 
-		Report.startTest("Caso de teste C004: Efetuar Cadastro sem confirmação de senha");
+		Report.startTest("Caso de teste L001: Efetuar Login com o Chrome");
 		this.driver = DriverSetup.getDriverConfigForChrome("https://www.rodoviariaportoalegre.com.br");
 		this.loginTask = new LoginTask(driver);
 		this.loginVerificationPoint = new LoginVerificationPoint(driver);		

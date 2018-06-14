@@ -1,7 +1,6 @@
-package rodoviariapoa.testcases.with.firefox;
+package rodoviariapoa.testcases;
 
 import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
 
 import org.junit.After;
 import org.junit.Before;
@@ -16,7 +15,7 @@ import rodoviariapoa.ressources.ScreenShot;
 import rodoviariapoa.tasks.RegistrationTask;
 import rodoviariapoa.verificationpoints.ResgistrationVerificationPoint;
 
-public class C003EfetuarCadastroChromeTestCase {
+public class C004EfetuarCadastroFirefoxTestCase {
 
 	private WebDriver driver;
 	private RegistrationTask cadastroTask;
@@ -24,8 +23,8 @@ public class C003EfetuarCadastroChromeTestCase {
 
 	@Before
 	public void setUp() { 
-		Report.startTest("Caso de teste C004: Efetuar Cadastro");
-		this.driver = DriverSetup.getDriverConfigForChrome("https://www.rodoviariaportoalegre.com.br");
+		Report.startTest("Caso de teste C004: Efetuar Cadastro com o Firefox");
+		this.driver =  DriverSetup.getDriverConfigFirefox("https://www.rodoviariaportoalegre.com.br");
 		this.cadastroTask = new RegistrationTask(driver);
 		this.cadastroVerificationPoint = new ResgistrationVerificationPoint(driver);		
 	}
@@ -39,7 +38,7 @@ public class C003EfetuarCadastroChromeTestCase {
 		Thread.sleep(300);				
 		Report.log(Status.PASS, "O formulário para criar conta abriu.", ScreenShot.capture(driver)); 
 		
-		this.cadastroTask.preencherFormularioDeCadastro("teste@gmail.com", "teste@gmail.com", "João", "1234567", "1234567");
+		this.cadastroTask.preencherFormularioDeCadastro("teste@gmail.com", "teste@gmail.com", "", "1234567a", "1234567a");
 		Report.log(Status.PASS, "Os dados foram inseridos.", ScreenShot.capture(driver)); 
 		
 		this.cadastroTask.enviarCadastro();
