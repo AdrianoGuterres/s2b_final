@@ -44,7 +44,7 @@ public class C002EfetuarCadastroFirefoxTestCase {
 		
 		boolean condition = this.cadastroVerificationPoint.resultVerification();	
 		
-		if(condition) {
+		if(condition == false) {
 			Report.log(Status.PASS, "O teste passou.", ScreenShot.capture(driver)); 
 			assertFalse(condition);
 		}else {

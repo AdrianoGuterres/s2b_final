@@ -23,12 +23,11 @@ public class SearchTask {
 		
 		this.buscaAppObject.getIdaTextField().sendKeys(ida);
 		this.buscaAppObject.getVoltaTextField().sendKeys(volta);
-		
-		Thread.sleep(1000);
 	}
 	
-	public void enviarBusca() {
+	public void enviarBusca() {		
 		this.buscaAppObject.getProcurarButton().click();
+		try { Thread.sleep(5000);} catch (InterruptedException e) {}
 	}
 	
 }

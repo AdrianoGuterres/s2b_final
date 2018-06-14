@@ -12,7 +12,7 @@ public class SearchVerificationPoint {
 	}
 	
 	public boolean resultVerification() {				
-		WebElement element = this.driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/h1"));	
+		WebElement element = this.driver.findElement(By.xpath("//*[@id=\"btn-ok\"]"));	
 		if(element == null) {
 			return false;
 		}else {
